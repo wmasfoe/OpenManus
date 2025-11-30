@@ -1,0 +1,259 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "🚀 Debug Main (OpenManus)",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/main.py",
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}",
+                "PYTHONUNBUFFERED": "1"
+            },
+            "purpose": [
+                "debug-in-terminal"
+            ]
+        },
+        {
+            "name": "🚀 Debug Main (带参数)",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/main.py",
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "args": [
+                "--prompt",
+                "分析一下deepseek最新模型和claude最新模型的优缺点"
+            ],
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}",
+                "PYTHONUNBUFFERED": "1"
+            },
+            "purpose": [
+                "debug-in-terminal"
+            ]
+        },
+        {
+            "name": "🔄 Debug Flow Mode (run_flow.py)",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/run_flow.py",
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}",
+                "PYTHONUNBUFFERED": "1"
+            },
+            "purpose": [
+                "debug-in-terminal"
+            ]
+        },
+        {
+            "name": "🌐 Debug MCP Server",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/run_mcp_server.py",
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}",
+                "PYTHONUNBUFFERED": "1"
+            },
+            "purpose": [
+                "debug-in-terminal"
+            ]
+        },
+        {
+            "name": "📦 Debug Sandbox Mode",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/sandbox_main.py",
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}",
+                "PYTHONUNBUFFERED": "1"
+            },
+            "purpose": [
+                "debug-in-terminal"
+            ]
+        },
+        {
+            "name": "🧪 Debug Current Test File",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "pytest",
+            "args": [
+                "${file}",
+                "-v",
+                "-s",
+                "--log-cli-level=DEBUG"
+            ],
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}",
+                "PYTHONUNBUFFERED": "1"
+            }
+        },
+        {
+            "name": "🧪 Debug All Tests",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "pytest",
+            "args": [
+                "tests/",
+                "-v",
+                "-s",
+                "--log-cli-level=DEBUG"
+            ],
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}",
+                "PYTHONUNBUFFERED": "1"
+            }
+        },
+        {
+            "name": "🔍 Debug Specific Agent (Manus)",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "app.agent.manus",
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}",
+                "PYTHONUNBUFFERED": "1"
+            }
+        },
+        {
+            "name": "🛠️ Debug Tool Execution",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/main.py",
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "args": [
+                "--prompt",
+                "执行 Python 代码: print('Hello, World!')"
+            ],
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}",
+                "PYTHONUNBUFFERED": "1"
+            },
+            "purpose": [
+                "debug-in-terminal"
+            ],
+            "stopOnEntry": false
+        },
+        {
+            "name": "📊 Debug Data Analysis Agent",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/run_flow.py",
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}",
+                "PYTHONUNBUFFERED": "1"
+            },
+            "purpose": [
+                "debug-in-terminal"
+            ]
+        },
+        {
+            "name": "🐛 Debug with Breakpoint on Exception",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/main.py",
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}",
+                "PYTHONUNBUFFERED": "1"
+            },
+            "purpose": [
+                "debug-in-terminal"
+            ],
+            "stopOnEntry": false,
+            "postDebugTask": "",
+            "preLaunchTask": "",
+            "debugOptions": [
+                "RedirectOutput",
+                "ShowReturnValue"
+            ]
+        },
+        {
+            "name": "🔬 Attach to Running Process",
+            "type": "debugpy",
+            "request": "attach",
+            "connect": {
+                "host": "localhost",
+                "port": 5678
+            },
+            "pathMappings": [
+                {
+                    "localRoot": "${workspaceFolder}",
+                    "remoteRoot": "."
+                }
+            ]
+        },
+        {
+            "name": "🎓 Debug Test Script (新手推荐)",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/debug_test.py",
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}",
+                "PYTHONUNBUFFERED": "1"
+            },
+            "purpose": [
+                "debug-in-terminal"
+            ]
+        },
+        {
+            "name": "⚙️ Debug with Custom Max Steps (30 steps)",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/main_custom_steps.py",
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "args": [
+                "--max-steps",
+                "30",
+                "--prompt",
+                "分析一下deepseek最新模型和claude最新模式的优缺点"
+            ],
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}",
+                "PYTHONUNBUFFERED": "1"
+            },
+            "purpose": [
+                "debug-in-terminal"
+            ]
+        },
+        {
+            "name": "⚙️ Debug with Custom Max Steps (50 steps)",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/main_custom_steps.py",
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "args": [
+                "--max-steps",
+                "50"
+            ],
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}",
+                "PYTHONUNBUFFERED": "1"
+            },
+            "purpose": [
+                "debug-in-terminal"
+            ]
+        }
+    ]
+}
